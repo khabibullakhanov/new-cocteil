@@ -1,0 +1,38 @@
+#navigatio-top-main-container {
+    width: 100%;
+    background-color: #514A7E;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#navigatio-top-main-container-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 3%;
+    color: white !important;
+}
+
+#navigatio-top-main-container-inside > h2 {
+    color: white;
+    font-size: 15px;
+}
+
+#country-flags {
+    width: 35px;
+    height: 35px;
+}
+
+#country-flags-uzb, #country-flags-rus {
+    width: 35px;
+    height: 20px;
+}
+
+#menu-languages {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

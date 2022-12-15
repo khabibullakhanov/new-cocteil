@@ -1,0 +1,48 @@
+{
+    "short_name": "Cokteil",
+    "name": "Cokteil",
+    "scope": "/",
+      "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "black",
+    
+   "icons": [
+     {
+        "src": "",
+        "sizes": "512x512"
+      },
+      {
+        "src": "",
+        "sizes": "192x192"
+      },
+      {
+        "src": "",
+        "sizes": "144x144"
+      },
+      {
+        "src": "",
+        "sizes": "96x96"
+      },
+      {
+        "src": "",
+        "sizes": "87x87"
+      },
+      {
+        "src": "",
+        "sizes": "72x72"
+      },
+  
+      {
+        "src": "ios/50.png",
+        "sizes": "50x50"
+      },
+      
+      {
+        "src": "",
+        "sizes": "48x48"
+      }
+      
+     
+    ]
+  }
