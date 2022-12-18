@@ -129,9 +129,9 @@
 
 #product-catalog-main-container-bottom {
     display: flex;
-    width: 100%;
+    width: 95%;
     justify-content: space-between;
-    padding-left: 1%;
+    padding-left: 2%;
 }
 
 #product-catalog-main-container-bottom-left {
