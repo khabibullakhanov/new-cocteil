@@ -50,7 +50,6 @@ export function BasketProducts({ product, setProduct }) {
   const DeleteCart = (i) => {
     let del = product.filter((item, index) => index !== i);
     setProduct(del);
-    console.log(setProduct(del));
     toast.success("Product seccessfully deleted !");
   };
 
@@ -167,6 +166,7 @@ export function BasketProducts({ product, setProduct }) {
                 id="product-catalog-main-container-bottom-right"
                 onClick={() => {
                   navigate(`product/${item.id}`);
+                  console.log("sadtyasvgjh");
                 }}
               >
                 <p>Информация о доставке</p>

@@ -15,7 +15,7 @@ export function SearchBar() {
   const searched = useSelector((state) => state.search);
   const [products] = useState([
     {
-      id: 1,
+      id: 0,
       name: "Namangan Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
@@ -26,7 +26,7 @@ export function SearchBar() {
       totalPrice: 127,
     },
     {
-      id: 2,
+      id: 1,
       name: "Kosonsoy Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
@@ -37,8 +37,19 @@ export function SearchBar() {
       totalPrice: 127,
     },
     {
-      id: 3,
+      id: 2,
       name: "Chust Sh. ",
+      cost: "50.00 р",
+      img: [uy1, uy2, uy3, uy4],
+      code: "Dos'tlik 5-dom 43-uy",
+      color: "Al'o",
+      size: "75 kv",
+      count: 1,
+      totalPrice: 127,
+    },
+    {
+      id: 3,
+      name: "Pop Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
       code: "Dos'tlik 5-dom 43-uy",
@@ -49,17 +60,6 @@ export function SearchBar() {
     },
     {
       id: 4,
-      name: "Pop Sh. ",
-      cost: "50.00 р",
-      img: [uy1, uy2, uy3, uy4],
-      code: "Dos'tlik 5-dom 43-uy",
-      color: "Al'o",
-      size: "75 kv",
-      count: 1,
-      totalPrice: 127,
-    },
-    {
-      id: 5,
       name: "Namangan Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
@@ -70,7 +70,7 @@ export function SearchBar() {
       totalPrice: 127,
     },
     {
-      id: 6,
+      id: 5,
       name: "Davlatobod Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
@@ -81,7 +81,7 @@ export function SearchBar() {
       totalPrice: 127,
     },
     {
-      id: 7,
+      id: 6,
       name: "Uhcqo'rg'on Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
@@ -92,7 +92,7 @@ export function SearchBar() {
       totalPrice: 127,
     },
     {
-      id: 8,
+      id: 7,
       name: "To'raqo'rg'on Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
@@ -103,7 +103,7 @@ export function SearchBar() {
       totalPrice: 127,
     },
     {
-      id: 9,
+      id: 8,
       name: "Chust Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
@@ -114,7 +114,7 @@ export function SearchBar() {
       totalPrice: 127,
     },
     {
-      id: 10,
+      id: 9,
       name: "Pop Sh. ",
       cost: "50.00 р",
       img: [uy1, uy2, uy3, uy4],
@@ -124,7 +124,6 @@ export function SearchBar() {
       count: 1,
       totalPrice: 127,
     },
-
   ]);
   return (
     <div id="search-bar-container">

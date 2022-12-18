@@ -99,7 +99,7 @@ export function Menu() {
                 <div id='menu-item-content'>
                     {menuNames.map((item, index) => {
                         return (
-                            <Link to={item.path}>
+                            <Link key={index} to={item.path}>
                                 {item.name}
                             </Link>
                         )
