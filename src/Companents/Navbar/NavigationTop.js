@@ -19,7 +19,7 @@ export function NavigationTop() {
                 <IconButton onClick={() => {
                     navigate(-1)
                 }}>
-                    <ArrowBackIosIcon style={{ color: "white" }} />
+                    <ArrowBackIosIcon role="menuitem"  style={{ color: "white" }} />
                 </IconButton>
                 <h2>
                     Регистрация

@@ -132,14 +132,7 @@ export function Basket() {
         }
         id="scroll-to-top-basket"
       >
-        <div
-          // style={
-          //   location.pathname === `/basket/product/:id`
-          //     ? { display: "none" }
-          //     : { display: "block" }
-          // }
-          id="scroll-to-top-basket-top"
-        >
+        <div id="scroll-to-top-basket-top">
           <img
             src={topIcon}
             alt=""
@@ -148,14 +141,7 @@ export function Basket() {
             }}
           />
         </div>
-        <div
-          // style={
-          //   location.pathname === `/basket/product/:id`
-          //     ? { display: "none" }
-          //     : { display: "block" }
-          // }
-          id="scroll-to-top-basket-inside"
-        >
+        <div id="scroll-to-top-basket-inside">
           <p>
             К оформлению <span>{product.length} шт</span> шт,{" "}
             <span>
