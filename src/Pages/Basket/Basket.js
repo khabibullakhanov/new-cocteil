@@ -130,7 +130,7 @@ export function Basket() {
             ? { display: "flex", zIndex: "99999" }
             : { display: "block" }
         }
-        id="scroll-to-top-basket"
+        id="scroll-to-top-basket" 
       >
         <div id="scroll-to-top-basket-top">
           <img

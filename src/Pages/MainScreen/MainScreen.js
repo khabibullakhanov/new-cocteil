@@ -14,7 +14,7 @@ export function MainScreen() {
                 <h2>Добро пожаловать в <span>Cocteil</span></h2>
                 <p>Экономим Ваше время! Предлагаем лучшие цены! Доставляем в кратчайшие сроки!</p>
                 <div id='main-screen-see-more-content' onClick={() => {
-                    navigate("/catalog")
+                    navigate("/product_view")
                 }}>
                     <p>Каталог</p>
                     <img src={rightArrow} alt="" />

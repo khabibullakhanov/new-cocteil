@@ -14,6 +14,7 @@ import { Registration } from "./Pages/Registration/Registration";
 import { Feedback } from "./Pages/Feedback/Feedback";
 import { Basket } from "./Pages/Basket/Basket";
 import { Likes } from "./Pages/Likes/Likes";
+import { ProductView } from "./Companents/ProductView/ProductView";
 
 export function Router() {
   const location = useLocation();
@@ -40,6 +41,7 @@ export function Router() {
         <Route path="/feedbacks" element={<Feedback />} />
         <Route path="/basket" element={<Basket />} />
         <Route path="/likes" element={<Likes />} />
+        <Route path="/product_view" element={<ProductView />} />
         {/* <Route path="/portfolios" element={<Portfolios />} />
                 <Route path="/add_portfolio" element={<AddPortfolio />} />
                 <Route path="/portfolios/view_portfolio" element={<EditPortfolio/>} /> */}
@@ -53,9 +55,9 @@ export function Router() {
           }
           id="navigation-bottom-top-part-category"
         >
-          <NavLink>Женщинам</NavLink>
-          <NavLink>Мужчинам</NavLink>
-          <NavLink>Детям</NavLink>
+          <NavLink>Арендная</NavLink>
+          <NavLink>Бестселлер</NavLink>
+          <NavLink>Ежедневно</NavLink>
         </div>
 
         <NavigationBottom />
