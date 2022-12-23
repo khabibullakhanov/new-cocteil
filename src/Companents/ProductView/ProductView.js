@@ -15,7 +15,7 @@ import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 
 export function ProductView() {
-  const [data, setData] = useState([
+  const [data] = useState([
     {
       id: 0,
       name: "Namangan Sh. ",
@@ -30,7 +30,7 @@ export function ProductView() {
     },
   ]);
 
-  const [mostSeen, setMostSeen] = useState([uy1, uy2, uy3, uy4]);
+  const [mostSeen] = useState([uy1, uy2, uy3, uy4]);
 
   return (
     <div id="product-view-main-container">
@@ -153,8 +153,8 @@ export function ProductView() {
                 />
               </div>
               <div id="product-view-bottom-connect-content">
-                <a href="" >Добавить отзыв</a>
-                <a href="" >Смотреть все отзывы</a>
+                <p>Добавить отзыв</p>
+                <p>Смотреть все отзывы</p>
               </div>
               <div id="product-veiw-buy-content">
                 <button>Купить сейчас</button>
@@ -185,7 +185,7 @@ export function ProductView() {
         {mostSeen.map((mostItem, mostIndex) => {
           return (
             <SwiperSlide id="mostSeen-bestseller-swiper" key={mostIndex}>
-              <img src={mostItem} />
+              <img src={mostItem} alt=""/>
             </SwiperSlide>
           );
         })}
