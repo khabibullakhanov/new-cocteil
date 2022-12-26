@@ -15,6 +15,7 @@ import { Feedback } from "./Pages/Feedback/Feedback";
 import { Basket } from "./Pages/Basket/Basket";
 import { Likes } from "./Pages/Likes/Likes";
 import { ProductView } from "./Companents/ProductView/ProductView";
+import { AllFeedbacks } from "./Pages/AllFeedbacks/AllFeedbacks";
 
 export function Router() {
   const location = useLocation();
@@ -30,9 +31,6 @@ export function Router() {
       >
         <NavigationTop />
       </div>
-      {/* <div style={location.pathname === "/menu" ? { display: "block" } : { display: "block" }}>
-                <CatalogSearch />
-            </div> */}
       <Routes>
         <Route path="/" element={<MainScreen />} />
         <Route path="/menu" element={<Menu />} />
@@ -42,9 +40,7 @@ export function Router() {
         <Route path="/basket" element={<Basket />} />
         <Route path="/likes" element={<Likes />} />
         <Route path="/product_view" element={<ProductView />} />
-        {/* <Route path="/portfolios" element={<Portfolios />} />
-                <Route path="/add_portfolio" element={<AddPortfolio />} />
-                <Route path="/portfolios/view_portfolio" element={<EditPortfolio/>} /> */}
+        <Route path="/allFeedbacks" element={<AllFeedbacks/>} />
       </Routes>
       <Paper sx={MyStyle.Paper} elevation={3}>
         <div

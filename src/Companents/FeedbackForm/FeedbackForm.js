@@ -9,13 +9,28 @@ import arrowRight from "../../Assets/Icons/Right Arrow.svg";
 
 export function FeedbackForm() {
   const [modal, setModal] = useState(true);
+  const [feedback, setFeedback] = useState([]);
+  console.log(feedback);
+  const localFeedbacks = JSON.parse(
+    localStorage.getItem("localFeedbacks") || "[]"
+  );
 
   return (
     <div
       style={modal ? { display: "flex" } : { display: "none" }}
       id="feedback-main-container"
     >
-      <form id="feedback-main-form-container">
+      <form
+        id="feedback-main-form-container"
+        onSubmit={(e) => {
+          e.preventDefault();
+          localStorage.setItem(
+            "localFeedbacks",
+            JSON.stringify([...localFeedbacks, feedback])
+          );
+          setFeedback({ name: "", feedback: "" });
+        }}
+      >
         <div id="feedback-main-form-container-top">
           <div>
             <IconButton
@@ -29,16 +44,37 @@ export function FeedbackForm() {
           <h2>Ваш отзыв</h2>
         </div>
         <div id="feedback-form-name-part">
-          <input type="text" placeholder="Фамилия и имя" />
+          <input
+            type="text"
+            value={feedback.name}
+            placeholder="Фамилия и имя"
+            onChange={(e) => {
+              setFeedback({ ...feedback, name: e.target.value });
+            }}
+          />
           <div id="feedback-form-text-part">
-            <input type="text" placeholder="Напишите свой отзыв..." />
+            <input
+              type="text"
+              value={feedback.feedback}
+              placeholder="Напишите свой отзыв..."
+              onChange={(e) => {
+                setFeedback({ ...feedback, feedback: e.target.value });
+              }}
+            />
             <div id="feedback-form-text-part-bottom">
               <p>Отзыв</p>
               <div id="feedback-form-text-part-bottom-right">
                 <label>
-                  <span>Прикрепить фото</span>
+                  <span>
+                    {feedback.img ? feedback.img.name : "Прикрепить фото"}
+                  </span>
                   <AttachFileIcon />
-                  <input type="file" />
+                  <input
+                    type="file"
+                    onChange={(e) => {
+                      setFeedback({ ...feedback, img: e.target.files[0] });
+                    }}
+                  />
                 </label>
               </div>
             </div>
@@ -116,7 +152,7 @@ export function FeedbackForm() {
             />
           </div>
         </div>
-        <button id="send-feedback-btn" type="button">
+        <button id="send-feedback-btn" type="submit">
           Сохранить
           <img src={arrowRight} alt="" />
         </button>

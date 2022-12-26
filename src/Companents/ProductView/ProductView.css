@@ -1,7 +1,7 @@
 #product-view-main-container {
   max-height: 100vh;
   overflow-y: auto;
-  padding: 0.1% 0 20% 0;
+  padding: 3% 0 20% 0;
 }
 
 #product-view-swiper {

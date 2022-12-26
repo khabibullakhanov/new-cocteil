@@ -12,9 +12,11 @@ import uy4 from "../../Assets/Images/uy-4.webp";
 import { Checkbox } from "@mui/material";
 import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
+import { useNavigate } from "react-router-dom";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 
 export function ProductView() {
+  const navigate = useNavigate()
   const [data] = useState([
     {
       id: 0,
@@ -153,7 +155,11 @@ export function ProductView() {
                 />
               </div>
               <div id="product-view-bottom-connect-content">
-                <p>Добавить отзыв</p>
+                <p
+                onClick={()=> {
+                  navigate("/feedbacks")
+                }}
+                >Добавить отзыв</p>
                 <p>Смотреть все отзывы</p>
               </div>
               <div id="product-veiw-buy-content">
