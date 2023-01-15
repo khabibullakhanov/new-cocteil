@@ -93,3 +93,8 @@
     outline: none;
     padding: 2% 5%;
 }
+
+#swiper-top-text-product-view {
+    text-align: center;
+    padding-bottom: 10%;
+}

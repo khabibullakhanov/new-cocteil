@@ -4,7 +4,7 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import { useNavigate } from "react-router-dom";
 import "./NavigationBottom.css";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 // import { Drawer } from "@mui/material";
@@ -66,9 +66,9 @@ export function NavigationBottom() {
 
           <BottomNavigationAction
             id="navigation-bottom-icons"
-            icon={<PersonOutlineOutlinedIcon style={{ color: "white" }} />}
+            icon={<ChatOutlinedIcon style={{ color: "white" }} />}
             onClick={() => {
-              navigate("/registration");
+              navigate("/all_feedbacks");
             }}
           />
           <BottomNavigationAction

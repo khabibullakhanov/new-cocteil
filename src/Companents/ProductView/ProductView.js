@@ -14,9 +14,10 @@ import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import { useNavigate } from "react-router-dom";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import { toast } from "react-toastify";
 
 export function ProductView() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [data] = useState([
     {
       id: 0,
@@ -33,6 +34,11 @@ export function ProductView() {
   ]);
 
   const [mostSeen] = useState([uy1, uy2, uy3, uy4]);
+
+  const addToBasket = () => {
+    toast.success("Product added to basket :) ");
+    navigate("/")
+  };
 
   return (
     <div id="product-view-main-container">
@@ -156,29 +162,36 @@ export function ProductView() {
               </div>
               <div id="product-view-bottom-connect-content">
                 <p
-                onClick={()=> {
-                  navigate("/feedbacks")
-                }}
-                >Добавить отзыв</p>
+                  onClick={() => {
+                    navigate("/add_feedback");
+                  }}
+                >
+                  Добавить отзыв
+                </p>
                 <p>Смотреть все отзывы</p>
               </div>
               <div id="product-veiw-buy-content">
                 <button>Купить сейчас</button>
-                <button>
-                  В корзину <ShoppingBagOutlinedIcon />{" "}
+                <button
+                  onClick={() => {
+                    addToBasket();
+                  }}
+                >
+                  В корзину <ShoppingBagOutlinedIcon />
                 </button>
               </div>
             </div>
           </div>
         );
       })}
+      <h3 id="swiper-top-text-product-view">С этим товаром покупают</h3>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 50,
+          rotate: 60,
           stretch: 0,
           depth: 100,
           modifier: 1,
@@ -191,7 +204,7 @@ export function ProductView() {
         {mostSeen.map((mostItem, mostIndex) => {
           return (
             <SwiperSlide id="mostSeen-bestseller-swiper" key={mostIndex}>
-              <img src={mostItem} alt=""/>
+              <img src={mostItem} alt="" />
             </SwiperSlide>
           );
         })}

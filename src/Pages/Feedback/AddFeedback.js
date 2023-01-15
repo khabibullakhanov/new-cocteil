@@ -1,9 +1,8 @@
 import React from "react";
-import "./Feedback.css";
-
+import "./AddFeedback.css";
 import { FeedbackForm } from "../../Companents/FeedbackForm/FeedbackForm";
 
-export function Feedback() {
+export function AddFeedback() {
   return (
     <>
       <FeedbackForm />

@@ -11,7 +11,7 @@ import { Menu } from "./Pages/Menu/Menu";
 // import { CatalogSearch } from "./Companents/CatalogSearch/CatalogSearch";
 import { Catalogs } from "./Pages/Catalogs/Catalogs";
 import { Registration } from "./Pages/Registration/Registration";
-import { Feedback } from "./Pages/Feedback/Feedback";
+import { AddFeedback } from "./Pages/Feedback/AddFeedback";
 import { Basket } from "./Pages/Basket/Basket";
 import { Likes } from "./Pages/Likes/Likes";
 import { ProductView } from "./Companents/ProductView/ProductView";
@@ -36,11 +36,11 @@ export function Router() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/catalog" element={<Catalogs />} />
-        <Route path="/feedbacks" element={<Feedback />} />
+        <Route path="/add_feedback" element={<AddFeedback />} />
         <Route path="/basket" element={<Basket />} />
         <Route path="/likes" element={<Likes />} />
         <Route path="/product_view" element={<ProductView />} />
-        <Route path="/allFeedbacks" element={<AllFeedbacks/>} />
+        <Route path="/all_feedbacks" element={<AllFeedbacks/>} />
       </Routes>
       <Paper sx={MyStyle.Paper} elevation={3}>
         <div
