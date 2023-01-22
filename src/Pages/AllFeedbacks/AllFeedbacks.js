@@ -4,7 +4,7 @@ export function AllFeedbacks() {
   
     return (
     <div>
-      Noooooooooooo
+      
     </div>
   )
 }

@@ -72,7 +72,7 @@ export function FeedbackForm() {
                   <input
                     type="file"
                     onChange={(e) => {
-                      setFeedback({ ...feedback, img: e.target.files[0] });
+                      setFeedback({ ...feedback, feedImg: e.target.files[0].name });
                     }}
                   />
                 </label>
