@@ -8,7 +8,6 @@ import { MainScreen } from "./Pages/MainScreen/MainScreen";
 import { useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { Menu } from "./Pages/Menu/Menu";
-// import { CatalogSearch } from "./Companents/CatalogSearch/CatalogSearch";
 import { Catalogs } from "./Pages/Catalogs/Catalogs";
 import { Registration } from "./Pages/Registration/Registration";
 import { AddFeedback } from "./Pages/Feedback/AddFeedback";

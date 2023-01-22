@@ -6,7 +6,6 @@ const user = JSON.parse(
     switch (action.type) {
       case "ADMIN":
         return action.payload;
-  
       default:
         return state;
     }

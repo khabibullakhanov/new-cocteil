@@ -6,11 +6,16 @@ import { Checkbox } from "@mui/material";
 import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import arrowRight from "../../Assets/Icons/Right Arrow.svg";
+import { useNavigate } from "react-router-dom";
 
 export function FeedbackForm() {
+  const navigate = useNavigate()
   const [modal, setModal] = useState(true);
-  const [feedback, setFeedback] = useState([]);
-  console.log(feedback);
+  const sana = new Date().toLocaleDateString()
+  const yama = Math.floor(sana)
+  const [feedback, setFeedback] = useState([{
+    name: "", feedback: "", feedImg: "", date: yama,
+  }]);
   const localFeedbacks = JSON.parse(
     localStorage.getItem("localFeedbacks") || "[]"
   );
@@ -29,6 +34,7 @@ export function FeedbackForm() {
             JSON.stringify([...localFeedbacks, feedback])
           );
           setFeedback({ name: "", feedback: "" });
+          navigate("/all_feedbacks")
         }}
       >
         <div id="feedback-main-form-container-top">
@@ -46,7 +52,7 @@ export function FeedbackForm() {
         <div id="feedback-form-name-part">
           <input
             type="text"
-            value={feedback.name}
+            // value={feedback.name}
             placeholder="Фамилия и имя"
             onChange={(e) => {
               setFeedback({ ...feedback, name: e.target.value });
@@ -55,7 +61,7 @@ export function FeedbackForm() {
           <div id="feedback-form-text-part">
             <input
               type="text"
-              value={feedback.feedback}
+              // value={feedback.feedback}
               placeholder="Напишите свой отзыв..."
               onChange={(e) => {
                 setFeedback({ ...feedback, feedback: e.target.value });
@@ -66,7 +72,7 @@ export function FeedbackForm() {
               <div id="feedback-form-text-part-bottom-right">
                 <label>
                   <span>
-                    {feedback.img ? feedback.img.name : "Прикрепить фото"}
+                    {feedback.feedImg ? feedback.feedImg.name : "Прикрепить фото"}
                   </span>
                   <AttachFileIcon />
                   <input

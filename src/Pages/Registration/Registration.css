@@ -1,105 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Italianno&family=Roboto:wght@100&family=Sacramento&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Italianno&family=Roboto:wght@100&family=Sacramento&display=swap");
 
 #regis-main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    /* margin: 0 auto; */
-    height: 80vh;
-    position: fixed ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* margin: 0 auto; */
+  height: 80vh;
+  position: fixed;
 }
 
 #regis-form-container {
-    background-color: #FFFDF5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-    width: 90% !important;
-    box-shadow: 0px 4px 10px rgba(81, 74, 126, 0.4);
-    padding-block: 8%;
+  background-color: #fffdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90% !important;
+  box-shadow: 0px 4px 10px rgba(81, 74, 126, 0.4);
+  padding-block: 8%;
 }
 
-#regis-form-container>h2 {
-    font-family: "Roboto";
-    font-weight: 200;
+#regis-form-container > h2 {
+  font-family: "Roboto";
+  font-weight: 200;
 }
 
 #regis-form-inside {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 #regis-form-inside input {
-    border: none;
+  border: none;
+  outline: none;
+  background: none;
+  width: 70%;
+  color: #343434 !important;
+  font-family: "Roboto";
+  font-weight: 100 !important;
+  border-bottom: 1px solid #7d7d7d;
+  padding: 0 0 1% 2%;
+}
+
+#regis-form-recept-content {
+  display: flex;
+  align-items: center;
+  width: 72%;
+  gap: 0.5rem;
+}
+
+#regis-form-recept-content > input {
+  width: 10%;
+  border: 5px solid #7d7d7d;
+  background-color: #7d7d7d;
+}
+
+#regist-form-recept-p {
+  font-size: 8px;
+  color: #7d7d7d;
+  font-weight: 500;
+  width: 90%;
+}
+
+#regis-submit-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+#regis-submit-content > button {
+  background-color: #514a7e;
+  border: none;
+  color: white;
+  height: 42px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#regis-submit-content > button > img {
+  width: 20%;
+}
+
+#login-img-label > input {
+  display: none;
+}
+
+#login-img-label {
     outline: none;
     background: none;
     width: 70%;
     color: #343434 !important;
     font-family: "Roboto";
     font-weight: 100 !important;
-    border-bottom: 1px solid #7D7D7D;
+    border-bottom: 1px solid #7d7d7d;
     padding: 0 0 1% 2%;
 }
 
-#regis-form-recept-content {
-    display: flex;
-    align-items: center;
-    width: 72%;
-    gap: 0.5rem;
-}
-
-#regis-form-recept-content>input {
-    width: 10%;
-    border: 5px solid #7D7D7D;
-    background-color: #7D7D7D;
-}
-
-#regist-form-recept-p {
-    font-size: 8px;
-    color: #7D7D7D;
-    font-weight: 500;
-    width: 90%;
-}
-
-#regis-submit-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-}
-
-#regis-submit-content>button {
-    background-color: #514A7E;
-    border: none;
-    color: white;
-    height: 42px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#regis-submit-content>button>img {
-    width: 20%;
+#login-img-label>p {
+font-size: 13.5px;
+color: #7d7d7d;
 }
 
 @media only screen and (max-width: 380px) {
-    #regis-submit-content>button {
-        width: 150px;
-        font-size: 11px;
-        height: 38px;
-    }
+  #regis-submit-content > button {
+    width: 150px;
+    font-size: 11px;
+    height: 38px;
+  }
 
-    #regist-form-recept-p {
-        font-size: 7px;
-        width: 100%;
-    }
+  #regist-form-recept-p {
+    font-size: 7px;
+    width: 100%;
+  }
 }
