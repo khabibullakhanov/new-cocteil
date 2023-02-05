@@ -11,15 +11,15 @@ import { useNavigate } from "react-router-dom";
 export function FeedbackForm() {
   const navigate = useNavigate()
   const [modal, setModal] = useState(true);
-  const sana = new Date().toLocaleDateString()
-  const yama = Math.floor(sana)
+  const sana = new Date().toLocaleDateString().split(".").join(" ")
+  const yama = parseFloat(sana)
   const [feedback, setFeedback] = useState([{
-    name: "", feedback: "", feedImg: "", date: yama,
+    name: "", feedback: "", feedImg: "", sanaa:sana
   }]);
   const localFeedbacks = JSON.parse(
     localStorage.getItem("localFeedbacks") || "[]"
   );
-
+console.log(yama);
   return (
     <div
       style={modal ? { display: "flex" } : { display: "none" }}

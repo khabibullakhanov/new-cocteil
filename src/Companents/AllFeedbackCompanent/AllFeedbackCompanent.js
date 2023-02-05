@@ -1,4 +1,5 @@
 import React from "react";
+import "./AllFeedbackCompanent.css";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import MyImage from "../../Assets/Images/My Image.jpeg";
 
@@ -9,16 +10,25 @@ export function AllFeedbackCompanent() {
   console.log(allFeedbacks.date);
 
   return (
-    <div>
+    <div id="feedbacks-companents-container">
+      <div id="feedbacks-companents-container-top">
+        <p>{allFeedbacks.length} отзывов</p>
+        <div>
+          <StarOutlinedIcon />
+          <StarOutlinedIcon />
+          <StarOutlinedIcon />
+          <StarOutlinedIcon />
+          <StarOutlinedIcon />
+        </div>
+      </div>
       {allFeedbacks.map((item, index) => {
-        console.log(item.date);
         return (
-          <div>
-            <figure>
+          <div id="feedback-content-mainy" key={index}>
+            <figure id="feedback-content-mainy-figure">
               <img src={MyImage} alt="" />
             </figure>
-            <div>
-              <div>
+            <div id="feedback-content-mainy-right-content">
+              <div id="feedback-content-mainy-right-content-top-content">
                 <div>
                   <StarOutlinedIcon />
                   <StarOutlinedIcon />
@@ -29,9 +39,9 @@ export function AllFeedbackCompanent() {
                 <p>{item.name}</p>
               </div>
               <span>{item.feedback}</span>
-              <div>
+              <div id="feedback-content-mainy-right-content-bottom-content">
                 <p>Смотреть фото</p>
-                <p>{item.date}</p>
+                <p>{parseFloat(item.sanaa, 5)}</p>
               </div>
             </div>
           </div>

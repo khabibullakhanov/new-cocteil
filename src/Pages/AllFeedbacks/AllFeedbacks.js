@@ -5,7 +5,7 @@ export function AllFeedbacks() {
  
 
   return (
-    <div>
+    <div id="feedback-page-container">
      <AllFeedbackCompanent/>
     </div>
   );
